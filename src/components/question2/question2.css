@@ -3,6 +3,10 @@
   align-items: center;
   column-gap: 5px;
 }
+.content {
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
 .box {
   border: 1px solid rgb(197, 191, 191);
   border-radius: 5px;

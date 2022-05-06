@@ -33,6 +33,12 @@
   min-height: 100px;
   align-items: center;
   gap: 1rem;
+  max-width: 600px;
+}
+.box-content {
+  display: grid;
+  grid-template-columns: 600px auto;
+  align-items: center;
 }
 .clear,
 .add {
@@ -46,6 +52,9 @@
   text-transform: capitalize;
 
   cursor: pointer;
+}
+.sequences {
+  display: flex;
 }
 .clear,
 .add:focus {

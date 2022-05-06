@@ -79,93 +79,94 @@ function Question2({ incrementQuestion }) {
 
   return (
     <div className="container">
-      <div className="question row">
-        <div className="col-8">
-          {" "}
-          <h4 className="app_ques col-12">convert decimal to fraction</h4>
-          <div className="box col-12">
-            <div className="content">
-              <div className="expression">
-                <div style={{ width: "max-content" }}>
-                  <p
-                    className="mb-0"
-                    style={{ borderBottom: "1px solid black" }}
-                  >
-                    {givenValue[0]}
-                  </p>
-                  <p className="mb-0">{givenValue[1]}</p>
-                </div>
-                <span className="sign">=</span>
+      <div className="question">
+        <div className="content">
+          <div className="ques-content">
+            <h4 className="app_ques ">convert decimal to fraction</h4>
+            <div className="box">
+              <div className="expression-content">
+                <div className="expression">
+                  <div style={{ width: "max-content" }}>
+                    <p
+                      className="mb-0"
+                      style={{ borderBottom: "1px solid black" }}
+                    >
+                      {givenValue[0]}
+                    </p>
+                    <p className="mb-0">{givenValue[1]}</p>
+                  </div>
+                  <span className="sign">=</span>
 
-                <div className="decimalFraction">
-                  <input
-                    className={`one ${focusClass_middle ? "focus" : ""}  ${
-                      //setting classnames depending on focus and if value is entered or not
-                      wholeNum != "" ? changeClass_middle : ""
-                    }`}
-                    type="text"
-                    value={wholeNum}
-                    onFocus={(e) => {
-                      setFocus_middle(true); // change classname to focus to make border of field orange
-                      setFocus_numer(false);
-                      setFocus_denom(false);
-                    }}
-                    onChange={(e) => {
-                      setChange_middle("change_middle");
-                      setwholeNum(e.target.value);
-                    }}
-                  />
-                  <span className="decimal"></span>
-                  <input
-                    className={`two ${focusClass_numer ? "focus" : ""} ${
-                      numer != "" ? changeClass_numer : ""
-                    }`}
-                    type="text"
-                    value={numer}
-                    onFocus={(e) => {
-                      setFocus_numer(true);
-                      setFocus_middle(false);
-                      setFocus_denom(false);
-                    }}
-                    onChange={(e) => {
-                      //when button on keyboard is pressed
+                  <div className="decimalFraction">
+                    <input
+                      className={`one ${focusClass_middle ? "focus" : ""}  ${
+                        //setting classnames depending on focus and if value is entered or not
+                        wholeNum != "" ? changeClass_middle : ""
+                      }`}
+                      type="text"
+                      value={wholeNum}
+                      onFocus={(e) => {
+                        setFocus_middle(true); // change classname to focus to make border of field orange
+                        setFocus_numer(false);
+                        setFocus_denom(false);
+                      }}
+                      onChange={(e) => {
+                        setChange_middle("change_middle");
+                        setwholeNum(e.target.value);
+                      }}
+                    />
+                    <span className="decimal"></span>
+                    <input
+                      className={`two ${focusClass_numer ? "focus" : ""} ${
+                        numer != "" ? changeClass_numer : ""
+                      }`}
+                      type="text"
+                      value={numer}
+                      onFocus={(e) => {
+                        setFocus_numer(true);
+                        setFocus_middle(false);
+                        setFocus_denom(false);
+                      }}
+                      onChange={(e) => {
+                        //when button on keyboard is pressed
 
-                      setChange_numer("change_numer");
-                      setNumer(e.target.value); // gettings value from keyboard and setting it to nummerator
-                    }}
-                  />
+                        setChange_numer("change_numer");
+                        setNumer(e.target.value); // gettings value from keyboard and setting it to nummerator
+                      }}
+                    />
 
-                  <input
-                    className={`three ${focusClass_denom ? "focus" : ""} ${
-                      denom != "" ? changeClass_denom : ""
-                    }`}
-                    type="text"
-                    value={denom}
-                    onFocus={(e) => {
-                      setFocus_denom(true);
-                      setFocus_numer(false);
-                      setFocus_middle(false);
-                    }}
-                    onChange={(e) => {
-                      setChange_denom("change_denom");
-                      setDenom(e.target.value);
-                    }}
-                  />
+                    <input
+                      className={`three ${focusClass_denom ? "focus" : ""} ${
+                        denom != "" ? changeClass_denom : ""
+                      }`}
+                      type="text"
+                      value={denom}
+                      onFocus={(e) => {
+                        setFocus_denom(true);
+                        setFocus_numer(false);
+                        setFocus_middle(false);
+                      }}
+                      onChange={(e) => {
+                        setChange_denom("change_denom");
+                        setDenom(e.target.value);
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-12">{result}</div>
-          <div className="btn col-12 text-right">
-            <button className="next" onClick={gotoques}>
-              {" "}
-              next
-            </button>
-          </div>
-        </div>
 
-        <div className="keypad col-4">
-          <Keypad checkBtn={checkBtn} />
+            <div className="result">{result}</div>
+            <div className="btn">
+              <button className="next" onClick={gotoques}>
+                {" "}
+                next
+              </button>
+            </div>
+          </div>
+          <div className="keypad">
+            <Keypad checkBtn={checkBtn} />
+          </div>
         </div>
       </div>
     </div>

@@ -7,6 +7,10 @@
   align-items: center;
   height: 140px;
 }
+.expression-content {
+  display: flex;
+  align-items: center;
+}
 .mixed_exprression {
   position: relative;
   height: 50px;
@@ -24,6 +28,10 @@
   padding: 2px;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
 .mixed_exprression .two {
   position: absolute;
   left: 30px;

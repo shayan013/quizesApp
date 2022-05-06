@@ -101,7 +101,7 @@ function Question4() {
   return (
     <div className="container">
       {" "}
-      <div className="question row">
+      <div className="question">
         <h4 className="app_ques col-12">
           Drag the elements below to make no more than 5 combination that equal
           to 2.Drag number off to remove them.
@@ -122,59 +122,66 @@ function Question4() {
             );
           })}
         </div>
-        <div className="box col-12 row align-items-center">
-          <div className="col-8" ref={drop}>
-            <div className="flex row">
-              {box.map(({ id, numer, denom }, index) => {
-                return (
-                  <div className="col-1 p-0 main-box">
-                    <Dragging_item
-                      numer={numer}
-                      denom={denom}
-                      index={index}
-                      id={id}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="buttons col-4">
-            <button
-              className="clear mx-3"
-              onClick={() => {
-                // when clearbutton is pressed reset all states
-                setBox([]);
 
-                setSum("");
-              }}
-            >
-              clear
-            </button>
-            {box.length > 2 ? ( // if dropping container have items less tah 5 ,then make add button disabled
-              <button className="add" onClick={addingValues}>
-                add
+        <div className="box">
+          <div className="box-content">
+            <div className="dropping-area" ref={drop}>
+              <div className="flex">
+                {box.map(({ id, numer, denom }, index) => {
+                  return (
+                    <div className="main-box">
+                      <Dragging_item
+                        numer={numer}
+                        denom={denom}
+                        index={index}
+                        id={id}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="buttons">
+              <button
+                className="clear"
+                onClick={() => {
+                  // when clearbutton is pressed reset all states
+                  setBox([]);
+
+                  setSum("");
+                }}
+              >
+                clear
               </button>
-            ) : (
-              <button disabled className="add_disabled" onClick={addingValues}>
-                add
-              </button>
-            )}
+              {box.length > 2 ? ( // if dropping container have items less tah 5 ,then make add button disabled
+                <button className="add" onClick={addingValues}>
+                  add
+                </button>
+              ) : (
+                <button
+                  disabled
+                  className="add_disabled"
+                  onClick={addingValues}
+                >
+                  add
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
-        <div className="col-12 text-right">
+        <div className="btn">
           {" "}
           <button disabled className="next_disabled">
             next
           </button>
         </div>
-        <div className="row">
-          <div className=" col-12 ">
+        <div className="">
+          <div className="  ">
             <h5>Sequences:{NoOfSequences}</h5>
             {sequenceArray.map((term, index) => {
               return (
-                <div className="d-flex">
+                <div className="sequences">
                   <p>{term}</p>
                   <p>=</p>
                   <p>{sumArray[index]}</p>

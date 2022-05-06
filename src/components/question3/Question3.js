@@ -93,33 +93,28 @@ function Question3({ incrementQuestion }) {
 
   return (
     <div className="container">
-      <div className="question row">
-        <div className="col-8">
-          <h4 className="app_ques col-12">convert decimal to fraction</h4>
-          <div className="box col-12">
-            <div className="content">
-              <div className="expression">
-                <div className="d-flex align-items-center">
-                  <div className="firstTerm mx-2">
-                    <p
-                      className="mb-0"
-                      style={{ borderBottom: "1px solid black" }}
-                    >
+      <div className="question">
+        <div className="content">
+          <div className="ques-content">
+            <h4 className="app_ques ">convert decimal to fraction</h4>
+            <div className="box ">
+              <div className="expression-content">
+                <div className="expression">
+                  <div className="firstTerm">
+                    <p className="" style={{ borderBottom: "1px solid black" }}>
                       {firstValueGiven[0]}
                     </p>
-                    <p className="mb-0">{firstValueGiven[1]}</p>
+                    <p className="">{firstValueGiven[1]}</p>
                   </div>
                   <div className="operator">+</div>
-                  <div className="secondTerm mx-2">
-                    <p
-                      className="mb-0"
-                      style={{ borderBottom: "1px solid black" }}
-                    >
+                  <div className="secondTerm">
+                    <p className="" style={{ borderBottom: "1px solid black" }}>
                       {secondValueGiven[0]}
                     </p>
-                    <p className="mb-0">{secondValueGiven[1]}</p>
+                    <p className="">{secondValueGiven[1]}</p>
                   </div>
                 </div>
+
                 <span className="sign">=</span>
 
                 <div className="mixed_exprression">
@@ -177,16 +172,16 @@ function Question3({ incrementQuestion }) {
                 </div>
               </div>
             </div>
+            <div className="results">{result}</div> {/*showing result*/}
+            <div className="btn ">
+              <button className="next" onClick={gotoques}>
+                next
+              </button>
+            </div>
           </div>
-          <div className="col-12">{result}</div> {/*showing result*/}
-          <div className="btn col-12 text-right">
-            <button className="next" onClick={gotoques}>
-              next
-            </button>
+          <div className="keypad">
+            <Keypad checkBtn={checkBtn} />
           </div>
-        </div>
-        <div className="col-4 keypad">
-          <Keypad checkBtn={checkBtn} />
         </div>
       </div>
     </div>

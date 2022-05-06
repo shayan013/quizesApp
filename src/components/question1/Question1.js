@@ -45,13 +45,13 @@ function Question1({ incrementQuestion }) {
   return (
     <div>
       <div className="container">
-        <div className="question row">
-          <h4 className="app_ques col-12">
+        <div className="question">
+          <h4 className="app_ques ">
             click on number line from 0 to 1 where you think result of fraction
             lies
           </h4>
-          <div className=" slider col-8 mx-3 ">
-            <h6 className="given text-center my-0">{given}</h6>
+          <div className=" slider">
+            <h6 className="given">{given}</h6>
             <Slider
               size="small"
               aria-label="Small"
@@ -65,9 +65,12 @@ function Question1({ incrementQuestion }) {
 
             <span className="end">1</span>
           </div>
-          <div className="text-center">{sliderValue}</div>
-          <div className="btn col-12 d-flex justify-content-between">
+          <div className="displaying-result">
+            <div className="sliderValue">{sliderValue}</div>
             <span className="result">{result}</span>
+          </div>
+
+          <div className="btn">
             <button className="next" onClick={gotoques}>
               {" "}
               next
