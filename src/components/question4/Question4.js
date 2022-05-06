@@ -5,7 +5,7 @@ import Dragging_item from "./Dragging_item";
 import "./question4.css";
 import { useDrop } from "react-dnd";
 
-function Question4() {
+function Question4({ incrementQuestion }) {
   let sum = 0;
   const newArray = []; // intermediate array for pushing each dragged
 
@@ -25,6 +25,9 @@ function Question4() {
     drop: (item) => addValuesToBox(item.id), // adding each dragged item to box array
   }));
 
+  function gotoques() {
+    incrementQuestion();
+  }
   const dragging_values = [
     // the dragging items array
     {
@@ -172,7 +175,7 @@ function Question4() {
 
         <div className="btn">
           {" "}
-          <button disabled className="next_disabled">
+          <button className="next" onClick={gotoques}>
             next
           </button>
         </div>
