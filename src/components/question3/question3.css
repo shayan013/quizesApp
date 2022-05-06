@@ -1,0 +1,66 @@
+.box {
+  border: 1px solid rgb(197, 191, 191);
+  border-radius: 5px;
+}
+.expression {
+  display: flex;
+  align-items: center;
+  height: 140px;
+}
+.mixed_exprression {
+  position: relative;
+  height: 50px;
+  width: 80px;
+  margin-left: 5px;
+  margin-top: 30px;
+}
+.mixed_exprression > input {
+  width: 25px;
+  height: 25px;
+  border: 0.4px solid rgb(148, 146, 146);
+  position: absolute;
+  border-radius: 0;
+
+  padding: 2px;
+}
+
+.mixed_exprression .two {
+  position: absolute;
+  left: 30px;
+
+  top: -9px;
+}
+
+.focus_middle,
+.focus_numer,
+.focus_denom {
+  outline-color: rgb(255, 125, 3);
+}
+.focus {
+  outline-color: rgb(255, 125, 3);
+}
+.change_middle,
+.change_numer,
+.change_denom {
+  outline-color: green;
+}
+.mixed_exprression .three {
+  left: 30px;
+
+  top: 18px;
+}
+
+.keypad_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 150px;
+  margin: 0 auto;
+  height: 243.18px;
+}
+
+.keypad_grid button {
+  border: none;
+  border: 0.4px solid rgb(211, 205, 205);
+  background-color: white;
+  cursor: pointer;
+}

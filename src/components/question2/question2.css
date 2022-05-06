@@ -1,0 +1,56 @@
+.expression {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.box {
+  border: 1px solid rgb(197, 191, 191);
+  border-radius: 5px;
+}
+
+.decimalFraction {
+  display: flex;
+}
+.decimalFraction > input {
+  width: 25px;
+}
+.decimalFraction .two {
+  margin-right: 3px;
+}
+.decimal {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: black;
+  margin-top: 14px !important;
+  margin: 0 2px;
+}
+.focus_middle,
+.focus_numer,
+.focus_denom {
+  outline-color: rgb(255, 125, 3);
+}
+.focus {
+  outline-color: rgb(255, 125, 3);
+}
+.change_middle,
+.change_numer,
+.change_denom {
+  outline-color: green;
+}
+
+.keypad_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 150px;
+  margin: 0 auto;
+  height: 243.18px;
+}
+
+.keypad_grid button {
+  outline: none;
+  border: none;
+  border: 0.4px solid rgb(211, 205, 205);
+  background-color: white;
+  cursor: pointer;
+}

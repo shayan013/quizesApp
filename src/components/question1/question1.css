@@ -1,0 +1,45 @@
+.slider {
+  border: 1px solid rgb(197, 191, 191);
+  border-radius: 5px;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  position: relative;
+  height: 150px;
+  padding: 0 2rem;
+}
+
+.result {
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.given {
+  width: 30px;
+
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.slider {
+  width: 300px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.starting {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  font-weight: bold;
+}
+.end {
+  position: absolute;
+
+  right: 10px;
+  top: 72px;
+  font-weight: bold;
+}
